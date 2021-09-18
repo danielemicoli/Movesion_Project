@@ -1,0 +1,60 @@
+<p>
+    <mat-toolbar>
+      <span>Companies</span>
+    </mat-toolbar>
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+
+  </p>
+
+<hr>
+
+<div class="card" id="company-creator" style="width: 25rem;">
+  <div class="mb-3">
+    <h2>New Company</h2>
+  </div>
+  <hr>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" name="name" placeholder="name" [(ngModel)]="newCompany.name">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" name="address" placeholder="address" [(ngModel)]="newCompany.address">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Phone</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" name="phone" placeholder="phone" [(ngModel)]="newCompany.phone">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Revenue</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" name="revenue" placeholder="revenue" [(ngModel)]="newCompany.revenue">
+</div>
+<button (click)="addCompany()" type="button" class="btn btn-dark">Add Company</button>
+
+</div>
+<tr  *ngFor="let item of companyList">
+
+<div class="card" id="company-list" style="width: 25rem;">
+  <div class="mb-3">
+    <th scope="row">{{item.name }}</th>
+  </div>
+  <hr>
+
+<div class="mb-3" >
+  <label for="exampleFormControlInput1" class="form-label">Address</label>
+  <td>{{item.address}}</td>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Phone</label>
+  <td>{{item.phone}}</td>
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Revenue</label>
+  <td>{{item.revenue}}</td>
+</div>
+</div>
+</tr>
+
+
+
+

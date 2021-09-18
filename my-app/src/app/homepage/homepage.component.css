@@ -1,0 +1,18 @@
+.card{
+  padding: 2.5em;
+  justify-content: end;
+  /* float: right; */
+  margin-right: 1em;
+  margin-left: 1em;
+}
+#company-creator{
+  float: right;
+}
+
+#company-list{
+  float:left
+}
+/* td{
+  width
+} */
+
