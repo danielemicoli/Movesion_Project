@@ -3,20 +3,37 @@
 <div class="container">
 
 
-<p>
-    <mat-form-field class="bars" appearance="outline">
-      <mat-label>Username</mat-label>
-      <input matInput placeholder="Username">
-      <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-    </mat-form-field>
-</p>
-<p> 
-  <mat-form-field class="bars" appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="Username">
-    <!-- <mat-icon matSuffix>sentiment_very_satisfied</mat-icon> -->
-  </mat-form-field>
-    
-  </p>
-</div>
+  <form>
+    <div class="title">
+      <h1>LOGIN</h1>
+    </div>
+    <div class="mb-6">
+      <label for="exampleInputEmail1" class="form-label">Username</label>
+      <input type="text" class="form-control" id="exampleInputEmail1" name="username" [(ngModel)]="username">
+      <!-- <p *ngIf="signinError && signinError.length !=" style="color: darkred; font-size:x-small">{{signinError}}</p> -->
+    </div>
+    <div class="mb-6">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" name="password" [(ngModel)]="password">
+  
+    </div>
+
+    <button (click)="loginUser()" type="submit" class="btn btn-dark">Login</button>
+  </form>
+  </div>
 </section>
+
+
+
+
+
+<!-- [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+      <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+          <div *ngIf="f.username.errors.required">Username is required</div> -->
+
+     <!-- [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">Password is required</div>
+        </div> 
+      [ngClass]="{ 'is-invalid': submitted && f.username.errors }" /-->
+

@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Icompany } from '../interfaces/icompany';
 import { HomepageService } from '../services/homepage.service';
 import { Company } from '../classes/company'
-
+import { Observable } from 'rxjs';
+import { FormGroup, FormControl, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-homepage',
@@ -11,29 +12,39 @@ import { Company } from '../classes/company'
 })
 export class HomepageComponent implements OnInit {
 
-  newCompany:any = [
-    {
-      name!: '',
-      address!:'',
-      phone!:'',
-      revenue!: '',
-      
-     }]
-  companyList:any 
+  companyList:Company [] = [];
+  
+  name:string = '';
+  address: string = '';
+  phone: string = '';
+  revenue: string = '';
 
-  constructor(private service:HomepageService) {
+  // form = new FormGroup({
+  //   name: new FormControl('', Validators.required),
+  //   address: new FormControl('', Validators.required),
+  //   phone: new FormControl('', Validators.required),
+  //   revenue: new FormControl('', Validators.required),
+
+  // })
+// newCompany: any;
+  constructor(private homePageservice:HomepageService) {
     // this,company = company;
-   }
+  }
   
   
   ngOnInit(): void {
-    this.companyList = this.service.getCompanies()
-    console.log(this.companyList)
+    this.companyList = this.homePageservice.getCompanies()
+    // this.homePageservice.getCompanies().subscribe(resp => console.log(resp))
   }
 
   addCompany(){
-    // this.service.
+    let companyList :Company = new Company (this.name, this.address, this.phone, this.revenue);
+    this.homePageservice.addCompany(companyList)
+    console.log(this.companyList)
 
+    // if (Object.keys(companyList).length === 0) {
+    //   console.log("No properties")
+  
   }
   
-}
+  }

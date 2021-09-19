@@ -1,18 +1,78 @@
+body{
+  background-color:rgb(255, 231, 133);
+}
+
 .card{
   padding: 2.5em;
   justify-content: end;
   /* float: right; */
   margin-right: 1em;
   margin-left: 1em;
+  box-shadow: 2px 2px 3px 2px rgb(173, 172, 172);
+  
 }
+.card:hover{
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+span{
+  color: white;
+  font-size: 1.5rem;
+}
+
+
+.logo{
+  background: white;
+  border-radius: 50%;
+  padding: 0.6em;
+  color: black;
+  font-weight: 800;
+  font-size: 20px;
+}
+#emptyCompanies{
+  font-size: 40px;
+  margin-left: 2em;
+  margin-top:4em;
+  font-weight: bold;
+
+}
+
+.navbar{
+  padding: 2em;
+  margin-bottom: 4em;
+  box-shadow: 3px 5px 3px rgb(112, 112, 112);
+
+}
+
 #company-creator{
   float: right;
 }
 
 #company-list{
-  float:left
+  float:left;
+  margin: 2em
 }
-/* td{
-  width
-} */
+.form-label{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.card h2{
+  font-size: 30px;
+  text-align: center;
+}
+.card th{
+  font-size: 20px;
+  line-height: 5em;
+}
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+}
+#emptyCompanies{
+  line-height: 1.7em;
+}
+.form-control.ng-touched.ng-invalid{
+  border:2px solid red;
+}
+
 
