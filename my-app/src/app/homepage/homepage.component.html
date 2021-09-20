@@ -20,7 +20,7 @@
     <h2>New Company</h2>
   </div>
   <hr>
-  <form >
+  <form class="form" (ngSubmit)="addCompany()" #myForm="ngForm">
     <div class="form-group">
       <label for="name" class="form-label"><i id="name-icon" class="fas fa-id-card"></i>Name</label>
       <input class="form-control" type="text" class="form-control" id="validationServer01" name="name" placeholder="name" [(ngModel)]="name" required>
@@ -38,7 +38,7 @@
       <label for="exampleFormControlInput1" class="form-label"><i id="revenue-icon" class="fas fa-dollar-sign"></i>Revenue</label>
       <input type="number"  class="form-control" id="exampleFormControlInput1" name="revenue" placeholder="revenue" [(ngModel)]="revenue" required>
     </div>
-    <button (click)="addCompany()" type="button" class="btn btn-dark">Add Company</button>
+    <button  type="submit" [disabled]="!myForm.form.valid" class="btn btn-dark">Add Company</button>
   </form>
   </div>
 

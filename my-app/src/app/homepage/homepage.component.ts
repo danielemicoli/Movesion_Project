@@ -31,9 +31,9 @@ export class HomepageComponent implements OnInit {
   constructor(private homePageservice:HomepageService) {
     // this,company = company;
   }
-  onSubmit(form:any) {
-    console.log(form.value)
-  }
+  // input.ng-touched.ng-invalid{
+
+  
   
   ngOnInit(): void {
     this.companyList = this.homePageservice.getCompanies()
@@ -45,6 +45,8 @@ export class HomepageComponent implements OnInit {
     let companyList :Company = new Company (this.id,this.name, this.address, this.phone, this.revenue);
     this.homePageservice.addCompany(companyList)
     console.log(this.companyList)
+    // this.input.nativeElement.value = '';
+
 
     // if (Object.keys(companyList).length === 0) {
     //   console.log("No properties")
