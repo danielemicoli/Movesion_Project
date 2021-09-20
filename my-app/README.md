@@ -1,47 +1,27 @@
-## CompanyApp
+# MyApp
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
-## Contents
----------------------
+## Development server
 
-1. [Informazioni](#informations)
-2. [Descrizione](#description)
-3. [Technologie](#technologies)
-4. [Installazione](#installation)
-5. [Collaboration](#collaboration)
-7. [Licenze](#license)
-8. [Contatti](#contact_information)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Informations
-Movesion Challenge
+## Code scaffolding
 
-## Description
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Il progetto include una pagina di login dove l'utente può accedere tramite le seguenti credenziali: username:admin, password:12345. Una volta loggato, l'utente atterra in una homepagine dove può inserire ed eliminare le aziende attraverso un form. Quest'ultimo necessita di tutti i campi per poter abilitare il bottone.
+## Build
 
-## Technologies
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-Project created with:
+## Running unit tests
 
-- [x] HTML5
-- [x] CSS3
-- [x] JavaScript
-- [x] Angular11
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Installation
+## Running end-to-end tests
 
- * Clone this repository to your desktop.
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
- * Navigate to the top level of the directory.
+## Further help
 
- * Open index.html in your browser.
-
-## Collaboration
- * No Collaboration
-
-
-## License
- * No License
-
-## Contact_Mail
-danielemicoli@gmail.com
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
