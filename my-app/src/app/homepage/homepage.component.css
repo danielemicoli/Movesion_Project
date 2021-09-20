@@ -49,8 +49,7 @@ h2{
 }
 #company-creator{
   background-color: rgb(255, 237, 215);
-  margin-top: 3em;
-  margin-right: 2em;
+  margin: 3em 2em 5em 2em;
 }
 #company-list{
   background-color: rgb(255, 237, 215);

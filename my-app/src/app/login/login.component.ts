@@ -13,10 +13,11 @@ export class LoginComponent implements OnInit {
     username = '';
     password = '';
 
-    signinError!:string;
-     jsonResp!:any;
+    // signinError!:string;
+    //  jsonResp!:any;
   constructor(private routeGuardService: RouteguardService,
-    private router:Router) {
+    private router:Router,
+    ) {
      }
 
   ngOnInit(): void {

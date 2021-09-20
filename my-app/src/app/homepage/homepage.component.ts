@@ -4,15 +4,17 @@ import { HomepageService } from '../services/homepage.service';
 import { Company } from '../classes/company'
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
   styleUrls: ['./homepage.component.css']
 })
+
 export class HomepageComponent implements OnInit {
   // validatingForm: FormGroup;
-
+  users!: any;
   companyList:Company [] = [];
   id:number = 0
   name:string = '';
@@ -20,18 +22,10 @@ export class HomepageComponent implements OnInit {
   phone: string = '';
   revenue: string = '';
 
-  // form = new FormGroup({
-  //   name: new FormControl('', Validators.required),
-  //   address: new FormControl('', Validators.required),
-  //   phone: new FormControl('', Validators.required),
-  //   revenue: new FormControl('', Validators.required),
 
-  // })
-// newCompany: any;
-  constructor(private homePageservice:HomepageService) {
-    // this,company = company;
+  constructor(private homePageservice:HomepageService,
+    private LoginService:LoginService) {
   }
-  // input.ng-touched.ng-invalid{
 
   
   
@@ -40,12 +34,17 @@ export class HomepageComponent implements OnInit {
     // this.homePageservice.getCompanies().subscribe(resp => console.log(resp))
     
   }
+  getLetter(){
+    return localStorage.getItem('key'),
+    console.log(this.getLetter)
+  }
+    
+  
 
   addCompany(){
     let companyList :Company = new Company (this.id,this.name, this.address, this.phone, this.revenue);
     this.homePageservice.addCompany(companyList)
     console.log(this.companyList)
-    // this.input.nativeElement.value = '';
 
 
     // if (Object.keys(companyList).length === 0) {

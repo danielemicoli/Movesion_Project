@@ -6,7 +6,7 @@ import { LoginService } from './login.service';
   providedIn: 'root'
 })
 export class RouteguardService implements CanActivate {
-
+  
   private login = true;
   constructor() { }
 
@@ -15,11 +15,16 @@ export class RouteguardService implements CanActivate {
     // return this.login;
   }
 
-  loginFunc(email: string, password:string){
+  loginFunc(username: string, password:string){
     // alert(email + ' '+password)
-    if(email === 'admin@admin.com' && password === '12345'){
+    
+    if(username === 'admin' && password === '12345'){
     this.login = true
+    let obj = username + password
+    
+    localStorage.setItem('key', JSON.stringify(obj))
+
   }else(alert('Username e/o Password errate')
 
-  )
+)
 }}

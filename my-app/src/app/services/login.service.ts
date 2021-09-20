@@ -22,7 +22,9 @@ export class LoginService {
   // canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
   //   this.loginForm();
   //   return this.login
-  
+  getLetter(){
+    return localStorage.getItem('key')
+  }
 
 
   loginForm(jsonResp:any){
