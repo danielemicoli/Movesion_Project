@@ -3,7 +3,7 @@
 <nav class="navbar  navbar-dark bg-dark">
   <!-- <div class="nav" id="nav-container"> -->
     <!-- <div class="nav-container" > -->
-      <div> <span>Companies</span></div>
+      <div id="cloud"><i class="fas fa-cloud"></i> <span id="companies-brand">CompanyApp</span></div>
     
         <div  class="d-flex">
          <span class="logo">DM</span>
@@ -13,41 +13,46 @@
 </nav>
 
 <!-- HOMEPAGE -->
-
-<div class="card" id="company-creator" style="width: 25rem;">
+<h1>Companies</h1>
+<hr>
+<div class="card" id="company-creator" style="width: 30rem;">
   <div class="mb-3">
     <h2>New Company</h2>
   </div>
   <hr>
-  <form>
+  <form >
     <div class="form-group">
-      <label for="validationServer01" class="form-label">Name</label>
-      <input class="form-control  is-valid" type="text" class="form-control" id="validationServer01" name="name" placeholder="name" [(ngModel)]="name" value="Mark" required>
+      <label for="name" class="form-label"><i id="name-icon" class="fas fa-id-card"></i>Name</label>
+      <input class="form-control" type="text" class="form-control" id="validationServer01" name="name" placeholder="name" [(ngModel)]="name" required>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1" class="form-label">Address</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" required name="address" placeholder="address" [(ngModel)]="address">
+      <label for="exampleFormControlInput1" class="form-label"><i id="address-icon" class="fas fa-home"></i>Address</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" required name="address" placeholder="address" [(ngModel)]="address"required>
 
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1" class="form-label">Phone</label>
+      <label for="exampleFormControlInput1" class="form-label"><i id="phone" class="fas fa-phone"></i>Phone</label>
       <input type="number" class="form-control" id="exampleFormControlInput1" name="phone" placeholder="phone" [(ngModel)]="phone" required>
     </div>
     <div class="form-group">
-      <label for="exampleFormControlInput1" class="form-label">Revenue</label>
+      <label for="exampleFormControlInput1" class="form-label"><i id="revenue-icon" class="fas fa-dollar-sign"></i>Revenue</label>
       <input type="number"  class="form-control" id="exampleFormControlInput1" name="revenue" placeholder="revenue" [(ngModel)]="revenue" required>
     </div>
     <button (click)="addCompany()" type="button" class="btn btn-dark">Add Company</button>
   </form>
   </div>
 
+  <div class="card" *ngIf= "companyList.length === 0">
+    <div class="mb-3">
+      <div id="emptyCompanies"><span id="empty">The list is Empty!</span></div>
+    </div>
+    </div>
 
-<div id="emptyCompanies" *ngIf= "companyList.length === 0">The list is Empty!</div>
-
-<tr  *ngFor="let item of companyList">
-<div class="card" id="company-list" style="width: 25rem;">
+<tr  *ngFor="let item of companyList; index as i">
+<div class="card" id="company-list">
   <div class="mb-3">
-    <th scope="row">{{item.name }}</th>
+    <th scope="row"> {{item.name }}  <button (click)="removeCompany(i)" type="button" class="btn-sm btn-danger mx-3">X</button>
+    </th>
   </div>
   <hr>
 
@@ -62,10 +67,10 @@
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label">Revenue</label>
   <td>&euro; {{item.revenue}}</td>
+
 </div>
 </div>
 </tr>
-
 
 
 

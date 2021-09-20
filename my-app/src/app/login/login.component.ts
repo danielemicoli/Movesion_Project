@@ -17,7 +17,6 @@ export class LoginComponent implements OnInit {
      jsonResp!:any;
   constructor(private routeGuardService: RouteguardService,
     private router:Router) {
-      this.signinError = 'wrong password'
      }
 
   ngOnInit(): void {
@@ -39,10 +38,7 @@ export class LoginComponent implements OnInit {
 
     // this.routeGuardService.loginUser(response)
     this.router.navigate(['/home'])
-    if(this.password != '12345')
-    this.signinError = 'wrong username'
   }   
-  
 
     }
   

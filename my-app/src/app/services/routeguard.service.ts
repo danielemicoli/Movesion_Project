@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 })
 export class RouteguardService implements CanActivate {
 
-  private login = false;
+  private login = true;
   constructor() { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
@@ -19,7 +19,7 @@ export class RouteguardService implements CanActivate {
     // alert(email + ' '+password)
     if(email === 'admin@admin.com' && password === '12345'){
     this.login = true
-  }else(alert('Credenziali errate')
+  }else(alert('Username e/o Password errate')
 
   )
 }}

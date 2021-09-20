@@ -7,33 +7,72 @@ body{
   justify-content: end;
   /* float: right; */
   margin-right: 1em;
-  margin-left: 1em;
+  margin-left: 2em;
+  margin-top: 4em;
   box-shadow: 2px 2px 3px 2px rgb(173, 172, 172);
-  
+  width: 20em;
+  background-color: rgb(255, 237, 215);
+
+}
+h1{
+  font-weight: 600;
+  font-size: 30px;
 }
 .card:hover{
   transform: scale(1.01);
   transition: 0.3s;
 }
-span{
+#companies-brand{
   color: white;
   font-size: 1.5rem;
+  margin-left: 1em;
 }
 
 
 .logo{
   background: white;
   border-radius: 50%;
-  padding: 0.6em;
+  padding: 0.8em;
   color: black;
-  font-weight: 800;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 17px;
+  
 }
-#emptyCompanies{
+h2{
   font-size: 40px;
-  margin-left: 2em;
-  margin-top:4em;
+  margin-left: 1em;
+  margin-top:2em;
   font-weight: bold;
+  text-align: center;
+  /* background-color: cadetblue; */
+
+}
+#company-creator{
+  background-color: rgb(255, 237, 215);
+  margin-top: 3em;
+  margin-right: 2em;
+}
+#company-list{
+  background-color: rgb(255, 237, 215);
+  margin-top: 3em;
+  width: 25em;
+}
+
+#empty{
+  background-color: rgb(255, 237, 215);
+  line-height: 60px;
+  color: rgb(47, 47, 47);
+  font-weight: 600;
+  font-size: 30px;
+  
+}
+#home{
+  color: black;
+}
+#empty:hover{
+  color: rgb(103, 186, 255);
+  transform: scale(1.01);
+  transition: 0.3s;
 
 }
 
@@ -42,6 +81,35 @@ span{
   margin-bottom: 4em;
   box-shadow: 3px 5px 3px rgb(112, 112, 112);
 
+}
+h1{
+  text-align: center;
+}
+
+
+ .fas{
+  color: white;
+  font-size: 28px;
+}
+#revenue-icon{
+  color: black;
+  font-size: 16px;
+  margin-right: 1em;
+}
+#phone{
+  color: black;
+  font-size: 16px;
+  margin-right: 1em;
+}
+#address-icon{
+  color: black;
+  font-size: 16px;
+  margin-right: 1em;
+}
+#name-icon{
+  color: black;
+  font-size: 16px;
+  margin-right: 1em;
 }
 
 #company-creator{
@@ -69,10 +137,11 @@ span{
   justify-content: space-between;
 }
 #emptyCompanies{
-  line-height: 1.7em;
+  /* line-height: 1.7em; */
+  /* margin-top: 12em; */
+  margin-left: 2em;
+  /* width: 20em; */
 }
 .form-control.ng-touched.ng-invalid{
   border:2px solid red;
 }
-
-

@@ -11,9 +11,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms'
   styleUrls: ['./homepage.component.css']
 })
 export class HomepageComponent implements OnInit {
+  // validatingForm: FormGroup;
 
   companyList:Company [] = [];
-  
+  id:number = 0
   name:string = '';
   address: string = '';
   phone: string = '';
@@ -30,21 +31,27 @@ export class HomepageComponent implements OnInit {
   constructor(private homePageservice:HomepageService) {
     // this,company = company;
   }
-  
+  onSubmit(form:any) {
+    console.log(form.value)
+  }
   
   ngOnInit(): void {
     this.companyList = this.homePageservice.getCompanies()
     // this.homePageservice.getCompanies().subscribe(resp => console.log(resp))
+    
   }
 
   addCompany(){
-    let companyList :Company = new Company (this.name, this.address, this.phone, this.revenue);
+    let companyList :Company = new Company (this.id,this.name, this.address, this.phone, this.revenue);
     this.homePageservice.addCompany(companyList)
     console.log(this.companyList)
 
     // if (Object.keys(companyList).length === 0) {
     //   console.log("No properties")
   
+  }
+  removeCompany(i:number):void{
+    this.homePageservice.removeCompany(i)
   }
   
   }
