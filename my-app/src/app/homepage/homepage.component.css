@@ -51,6 +51,9 @@ h2{
   background-color: rgb(255, 237, 215);
   margin: 3em 2em 5em 2em;
 }
+p{
+  margin-bottom: 0.9em;
+}
 #company-list{
   background-color: rgb(255, 237, 215);
   margin-top: 3em;

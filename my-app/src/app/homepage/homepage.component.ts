@@ -22,7 +22,8 @@ export class HomepageComponent implements OnInit {
   phone: string = '';
   revenue: string = '';
 
-
+  avatar:any;
+  
   constructor(private homePageservice:HomepageService,
     private LoginService:LoginService) {
   }
@@ -32,12 +33,16 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
     this.companyList = this.homePageservice.getCompanies()
     // this.homePageservice.getCompanies().subscribe(resp => console.log(resp))
+
+    const obj = JSON.parse(localStorage.getItem('key') || '{}');;
+    // console.log(obj);   
+    this.avatar = obj
     
+    console.log(this.avatar[0]+this.avatar[1]) 
+
+ 
   }
-  getLetter(){
-    return localStorage.getItem('key'),
-    console.log(this.getLetter)
-  }
+  
     
   
 
@@ -47,8 +52,6 @@ export class HomepageComponent implements OnInit {
     console.log(this.companyList)
 
 
-    // if (Object.keys(companyList).length === 0) {
-    //   console.log("No properties")
   
   }
   removeCompany(i:number):void{
