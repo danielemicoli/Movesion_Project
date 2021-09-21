@@ -5,6 +5,8 @@ import { Company } from '../classes/company'
 import { Observable } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { LoginService } from '../services/login.service';
+import { RouteguardService } from '../services/routeguard.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',
@@ -25,7 +27,9 @@ export class HomepageComponent implements OnInit {
   avatar:any;
   
   constructor(private homePageservice:HomepageService,
-    private LoginService:LoginService) {
+    private LoginService:LoginService,
+    private routeGuardService:RouteguardService,
+    private router: Router) {
   }
 
   
@@ -56,6 +60,10 @@ export class HomepageComponent implements OnInit {
   }
   removeCompany(i:number):void{
     this.homePageservice.removeCompany(i)
+  }
+  logoutFunc(){
+    this.routeGuardService.logout();
+    this.router.navigate(['login'])
   }
   
   }

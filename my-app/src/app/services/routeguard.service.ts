@@ -27,4 +27,9 @@ export class RouteguardService implements CanActivate {
   }else(alert('Username e/o Password errate')
 
 )
+
+}
+
+logout(){
+  this.login = false
 }}
