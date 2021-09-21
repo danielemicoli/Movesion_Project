@@ -7,7 +7,7 @@ import { LoginService } from './login.service';
 })
 export class RouteguardService implements CanActivate {
   
-  private login = true;
+  private login = false;
   constructor() { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
