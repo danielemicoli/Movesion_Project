@@ -1,5 +1,9 @@
 # Movesion_Project
 Progetto per colloquio Movesion
+
+per effettuare il login inserire 
+username: admin
+password: 12345 
 ## CompanyApp
 
 
